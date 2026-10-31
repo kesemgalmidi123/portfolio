@@ -109,6 +109,8 @@ h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-0
 .final p{margin:0;font-size:18px;color:#B9B2AA;letter-spacing:.04em}
 .final .btn.big{background:#fff;color:var(--black);border-color:#fff;font-size:20px;padding:20px 38px;gap:12px;margin-top:10px}
 .final .btn.big:hover{background:var(--rose);border-color:var(--rose)}
+.final .offer{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;text-align:right;font-size:18px;line-height:1.5;color:var(--on-black)}
+.final .offer li::before{content:"✦";color:var(--rose);margin-left:10px;font-size:13px}
 .final small{font-size:14px;color:#B9B2AA}
 .final small b{color:var(--on-black);user-select:all}
 .final footer{width:100%;margin-top:60px;border-color:#2A2A2A;color:#8F8880}
@@ -249,7 +251,7 @@ section{padding-block:96px}
 .cta-box .btn.big{background:#fff;color:var(--accent);border-color:#fff;font-size:19px;padding:18px 34px;gap:12px}
 .cta-box .cta-note{color:#F2C9D1}
 .cta-box .cta-phone{color:#fff}
-.cta-phone{font-weight:600;user-select:all;font-variant-numeric:tabular-nums;color:var(--fg)}
+.cta-phone{font-weight:600;user-select:all;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--fg)}
 .cta-list{margin:22px 0 0;padding:0 22px 0 0;font-size:18px;line-height:1.7;max-width:640px;display:flex;flex-direction:column;gap:6px}
 .cta-list li::marker{color:var(--accent)}
 .cta-x{font-family:var(--display);font-size:clamp(20px,2.3vw,26px);font-weight:500;line-height:1.4;max-width:760px;margin:28px 0 0}
@@ -283,8 +285,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:
       <h1 style="margin-top:18px">קסם<br>גלמידי</h1>
       <div class="kicker">(אתם יכולים לקרוא לי Magic)</div>
       <div class="role">אסטרטגית קריאייטיב · <span class="mark">מתמחה בפסיכולוגיה צרכנית<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 60 3, 120 12, 180 7 S 260 4, 298 8" fill="none" stroke="#7A1125" stroke-width="3" stroke-linecap="round"/></svg></span></div>
-      <p class="lead">אני לא מנחשת מה יעבוד על הקהל שלכם. אני נכנסת לו לראש. מבינה מה יגרום לו לעצור את הגלילה, לצפות עד הסוף, לזכור את המותג ולפעול. ומזה אני בונה תוכן שלא נעצר בפרזנטציה: תסריט, בריף, הפקה, עד שהוא חי ברשת ומביא תוצאות.</p>
-      <p class="promise">זאת ההבטחה שלי: לא עוד סרטון יפה. קריאייטיב שנבנה מהמחשבות של הקהל, ומזיז אותו לפעולה.</p>
+      <p class="lead">אני לא מנחשת מה יעבוד על הקהל שלכם. אני נכנסת לו לראש.<br>מבינה מה הוא רוצה, מה מניע אותו, מה עוצר אותו מלקנות ומה יגרום לו לפעול.<br>משם אני הופכת את התובנות לזוויות מכירה, קונספטים, תסריטים ובריפים לקריאייטיב שמטרתו להביא תוצאות.</p>
+      <p class="promise">לא עוד סרטון יפה. קריאייטיב שמבוסס על איך שהקהל שלכם חושב.</p>
     </div>
     <img class="photo" src="media/kesem-circle.jpg" alt="קסם גלמידי">
   </header>
@@ -361,7 +363,7 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:
     <li><span class="n">1</span><div><h3>מנתחת את הקהל. באמת.</h3><p>מה הוא רוצה, מה המחשבות הנסתרות שלו, מה יגרום לו לחשוב, מה יגרום לתת-המודע שלו לעצור - ואיך הוא יגיב.</p></div></li>
     <li><span class="n">2</span><div><h3>כותבת לו את מה שהוא רוצה לשמוע. וגם את מה שהוא לא.</h3><p>משלבת את זה עם הוויז׳ואל ועם המסר, ובונה את המשפך בראש שלו, עוד לפני שהוא יודע שהוא בתוך משפך.</p></div></li>
     <li><span class="n">3</span><div><h3>מייצאת הכול לבריף, או כותבת את התסריט.</h3><p>ולא מוותרת על שלושה הוקים. אף פעם.</p></div></li>
-    <li><span class="n">4</span><div><h3>מייצרת בעצמי, או מלווה את הצוות שמפיק.</h3><p>צילום, עריכה, עבודה עם יוצרי תוכן. אני שם עד שהתוצר נראה כמו שדמיינתי.</p></div></li>
+    <li><span class="n">4</span><div><h3>מלווה את הקריאייטיב עד לביצוע.</h3><p>כשצריך, אני גם יוצרת את התוכן בעצמי. כשיש צוות קיים, אני מכינה בריפים ומלווה את התהליך כדי שהרעיון האסטרטגי יעבור גם לתוצר הסופי.</p></div></li>
     <li><span class="n">5</span><div><h3>עולה לאוויר. אורגני או ממומן.</h3><p>ואז מנתחת את הדאטה.</p></div></li>
     <li><span class="n">6</span><div><h3>וינר הופך לעוד וינר.</h3><p>לא וינר? אני עושה עוד ניסויים, עוד טסטים, עד שאני מפצחת.</p></div></li>
   </ol>
@@ -399,15 +401,15 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:
 <section id="contact" class="cta" style="background:var(--soft);border-top:1px solid var(--line)"><div class="wrap">
   <div class="eyebrow">דברו איתי</div>
   <h2 style="margin-top:14px">רוצים שאכנס לראש של הקהל שלכם?</h2>
-  <p class="cta-lead">אני אעשה את המחקר, של קהל היעד ושל המתחרים, אלמד את הדאטה ואייצר את האסטרטגיה:</p>
-  <ul class="cta-list">
-    <li>למה הוינרים הם הוינרים, ואיך נייצר מהם עוד וינרים.</li>
-    <li>מה הטסטים הבאים.</li>
-    <li>על אילו תכנים נשים את התקציב.</li>
-    <li>ואבדוק: קונספטים, זוויות, מסרים וקהלים שונים.</li>
-    <li>אפיק לכם את התכנים בעצמי, או אוריד בריפים לצוות שלכם ואלווה אותו.</li>
+  <p class="cta-lead">אני חוקרת את הקהל שלכם, מנתחת את הקריאייטיבים והנתונים הקיימים, ומפצחת זוויות מכירה וקונספטים חדשים לבדיקה.<br>משם אני הופכת את האסטרטגיה לתסריטים, בריפים ותוכנית טסטים, ומלווה את הביצוע והלמידה מהתוצאות.<br>אפשר לעבוד איתי על פיצוח נקודתי או על תהליך קריאייטיב מתמשך, בהתאם למה שהמותג שלכם צריך.</p>
+  <p class="cta-x">מה אני מציעה:</p>
+  <ul class="cta-list" style="margin-top:12px">
+    <li>מחקר קהלים ופיצוח מסרים.</li>
+    <li>אסטרטגיית קריאייטיב לממומן.</li>
+    <li>פיתוח קונספטים וזוויות מכירה.</li>
+    <li>תסריטים ובריפים.</li>
+    <li>ליווי צוותי קריאייטיב ולמידה מתוצאות.</li>
   </ul>
-  <p class="cta-x">הכול כדי שהתקציב שלכם יעבוד <span class="mult">פי כמה</span>, בהתאם לאיפה שהמותג שלכם נמצא, ולמה שהוא צריך.</p>
   <div class="cta-box">
     <div class="cta-role">קסם גלמידי</div>
     <div class="cta-skills">אסטרטגית קריאייטיב</div>
@@ -582,6 +584,13 @@ footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:
   <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="#F2A7B5"/></svg>
   <h2>רוצים שאכנס לראש<br>של הקהל שלכם?</h2>
   <p>קסם גלמידי · אסטרטגית קריאייטיב</p>
+  <ul class="offer">
+    <li>מחקר קהלים ופיצוח מסרים.</li>
+    <li>אסטרטגיית קריאייטיב לממומן.</li>
+    <li>פיתוח קונספטים וזוויות מכירה.</li>
+    <li>תסריטים ובריפים.</li>
+    <li>ליווי צוותי קריאייטיב ולמידה מתוצאות.</li>
+  </ul>
   <a class="btn big" href="https://wa.me/972549202100" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c1.6.7 1.9.5 2.3.5a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1z" fill="currentColor"/></svg>אנחנו רוצים לעבוד איתך</a>
   <small>הכפתור פותח הודעת וואטסאפ אליי · <b>054-9202100</b></small>
   <footer><span>© קסם גלמידי</span><span>Magic</span></footer>
