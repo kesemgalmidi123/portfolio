@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="קסם גלמידי, אסטרטגית קריאייטיב המתמחה בפסיכולוגיה צרכנית. תיק עבודות: קייסים, סרטונים, תסריטים ובריפים.">
+<meta property="og:title" content="קסם גלמידי · אסטרטגית קריאייטיב">
+<meta property="og:description" content="לפני שאני כותבת מילה אחת, אני כבר יודעת בדיוק מה הקהל חושב ומרגיש.">
+<meta property="og:image" content="media/kesem-circle.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27%3E%3Cpath d=%27M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z%27 fill=%27%237A1125%27/%3E%3C/svg%3E">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>קסם גלמידי · אסטרטגית קריאייטיב</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+/* Layout: white editorial page, one column that breathes; bordeaux as a hand-drawn mark, not a fill.
+   Single deliberate light theme: the owner asked for a white site. */
+:root{
+  --bg:#FFFFFF; --fg:#111111; --muted:#6B6560; --line:#E9E5DF; --soft:#F6F4F0;
+  --accent:#7A1125; --accent-ink:#5E0C1C; --black:#0B0B0B; --on-black:#F4F1EC; --rose:#F2A7B5;
+  --display:'Rubik',system-ui,sans-serif; --body:'Assistant',system-ui,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.6;direction:rtl;text-align:right;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-0.01em}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:13px;letter-spacing:.2em;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.eyebrow svg{flex:none}
+.goal{display:inline-block;background:var(--accent);color:#fff;padding:2px 10px;border-radius:999px;letter-spacing:.08em;font-size:12px}
+.band .eyebrow{color:var(--rose)}
+.band .goal{background:var(--rose);color:var(--black)}
+.mark{position:relative;display:inline-block}
+.mark svg{position:absolute;right:-2%;left:-2%;bottom:-6px;width:104%;height:14px;pointer-events:none}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:13px 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid var(--fg);min-height:44px}
+.btn.fill{background:var(--fg);color:#fff}
+.btn.acc{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+/* nav */
+.nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px}
+.nav .brand{font-family:var(--display);font-weight:700;font-size:19px}
+.nav .links{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+.nav .links a{text-decoration:none}
+.nav .note{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:.06em;margin-right:4px;vertical-align:top}
+@media(max-width:720px){.nav .links{display:none}}
+
+/* hero */
+.hero{padding-block:48px 28px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:center}
+.hero h1{font-size:clamp(64px,11vw,136px);font-weight:900;line-height:.92;letter-spacing:-.03em}
+.hero .kicker{font-family:var(--display);font-size:17px;color:var(--accent);margin-top:10px;letter-spacing:.02em}
+.hero .role{font-family:var(--display);font-size:clamp(22px,2.6vw,30px);font-weight:500;line-height:1.25;margin-top:22px}
+.hero .promise{font-family:var(--display);font-size:clamp(18px,1.8vw,21px);font-weight:500;margin-top:18px;padding-right:16px;border-right:3px solid var(--accent);line-height:1.45;max-width:600px}
+.hero .lead{font-size:clamp(19px,2vw,23px);line-height:1.5;max-width:620px;margin-top:22px}
+.hero .photo{aspect-ratio:1/1;width:100%;max-width:100%;object-fit:cover;object-position:50% 50%;border-radius:50%}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:28px}.hero .photo{max-width:260px}}
+
+/* feed strip */
+.feed{margin-top:40px;position:relative}
+.feed .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-block:6px 18px;scrollbar-width:none;direction:rtl}
+.feed .track::-webkit-scrollbar{display:none}
+.feed .cell{flex:0 0 clamp(150px,18vw,210px);aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--black);scroll-snap-align:start;position:relative}
+.feed video{width:100%;height:100%;object-fit:cover;display:block}
+.feed .tag{position:absolute;bottom:10px;right:10px;left:10px;font-size:12px;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6);font-weight:600}
+.feed .hint{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px}
+
+/* numbers */
+.nums{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:28px}
+.nums .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-block:28px}
+.nums b{display:block;font-family:var(--display);font-size:clamp(34px,4vw,54px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.nums span{font-size:14px;color:var(--muted)}
+@media(max-width:720px){.nums .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* case logo */
+.case-logo{display:block;height:46px;width:auto;max-width:170px;object-fit:contain;margin-bottom:16px}
+.case-logo.big{height:76px;max-width:220px}
+.case-logo.pcm{height:44px;border-radius:6px}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px;align-items:start}
+.quotes img{width:100%;max-width:100%;display:block;border-radius:14px}
+.quotes .col{display:flex;flex-direction:column;gap:16px}
+@media(max-width:820px){.quotes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.quotes{grid-template-columns:1fr}}
+.pcm-quote{border-radius:12px;overflow:hidden;max-width:560px}
+.pcm-quote img{display:block;width:100%;max-width:100%}
+
+/* case index */
+.more .sec-head h2{font-size:clamp(28px,3.6vw,44px)}
+.case-index{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:36px}
+.case-index a{position:relative;display:block;aspect-ratio:9/13;border-radius:14px;overflow:hidden;background:#1C1C1C;text-decoration:none;color:#fff}
+.case-index img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .4s}
+.case-index a:hover img{transform:scale(1.04)}
+.case-index span{position:absolute;inset:auto 0 0 0;padding:16px;background:linear-gradient(transparent,rgba(0,0,0,.85));display:flex;flex-direction:column;gap:4px}
+.case-index b{font-family:var(--display);font-size:18px;line-height:1.2}
+.case-index small{font-size:13px;color:#D8D2CB}
+.case-index a::after{content:"↓";position:absolute;top:12px;left:12px;width:32px;height:32px;border-radius:50%;background:var(--rose);color:var(--black);display:flex;align-items:center;justify-content:center;font-weight:700}
+@media(max-width:720px){.case-index{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.feed a.cell{text-decoration:none;color:inherit;display:block}
+.final{padding-block:120px 48px}
+.final-in{display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px}
+.final h2{font-size:clamp(40px,6.5vw,84px);font-weight:900;line-height:1.02;letter-spacing:-.03em;max-width:900px}
+.final p{margin:0;font-size:18px;color:#B9B2AA;letter-spacing:.04em}
+.final .btn.big{background:#fff;color:var(--black);border-color:#fff;font-size:20px;padding:20px 38px;gap:12px;margin-top:10px}
+.final .btn.big:hover{background:var(--rose);border-color:var(--rose)}
+.final small{font-size:14px;color:#B9B2AA}
+.final small b{color:var(--on-black);user-select:all}
+.final footer{width:100%;margin-top:60px;border-color:#2A2A2A;color:#8F8880}
+@media(max-width:720px){.final{padding-block:80px 32px}.final .btn.big,.cta-box .btn.big{font-size:17px;padding:16px 26px}}
+
+/* sections */
+section{padding-block:96px}
+@media(max-width:720px){section{padding-block:64px}}
+.sec-head{display:flex;flex-direction:column;gap:16px;max-width:760px}
+.sec-head h2{font-size:clamp(36px,5vw,62px);font-weight:800;line-height:1.05}
+.sec-head p{margin:0;font-size:20px;color:var(--muted);line-height:1.6}
+
+/* how I think */
+.think{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.think .sec-head h2{font-size:clamp(32px,3.6vw,48px)}
+.think ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.steps-intro{font-family:var(--display);font-weight:600;color:var(--fg)!important;margin-top:8px!important}
+.flow li{position:relative;margin:0;display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;align-items:start}
+.flow li .n{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--display);font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;margin-top:10px}
+.flow li>div{padding:22px 26px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.flow li+li{margin-top:28px}
+.flow li+li::before{content:"";position:absolute;top:-28px;right:25px;width:2px;height:28px;background:var(--accent)}
+.flow li+li::after{content:"";position:absolute;top:-10px;right:20px;width:10px;height:10px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg)}
+.flow li:last-child .n{background:var(--fg)}
+.flow li h3{font-size:22px;font-weight:600;margin-bottom:6px;line-height:1.25}
+.flow li p{margin:0;color:var(--muted);font-size:17px}
+.flow li:last-child>div{background:var(--fg);color:#fff;border-color:var(--fg)}
+.flow li:last-child p{color:#CFC9C2}
+@media(max-width:820px){.think{grid-template-columns:1fr;gap:28px}}
+
+/* case */
+.case{display:grid;grid-template-columns:360px minmax(0,1fr);gap:56px;align-items:start}
+.case.flip{grid-template-columns:minmax(0,1fr) 360px}
+.case.flip .player,.case.flip .hooks{order:2}
+@media(max-width:860px){.case,.case.flip{grid-template-columns:1fr;gap:28px}.case.flip .player,.case.flip .hooks{order:0}.player{max-width:320px}}
+.player{position:relative;aspect-ratio:9/16;max-width:100%;border-radius:22px;overflow:hidden;background:var(--black);box-shadow:0 30px 60px rgba(0,0,0,.14)}
+.player.r45{aspect-ratio:4/5;border-radius:12px}
+.player video,.player img{width:100%;height:100%;object-fit:cover;display:block}
+.player button{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.player button span{width:76px;height:76px;border-radius:50%;border:1.5px solid #fff;background:rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.player.playing button span{opacity:0}
+.player .stat{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.92);color:var(--fg);font-family:var(--display);font-weight:700;font-size:15px;padding:6px 12px;border-radius:999px}
+.case .text{display:flex;flex-direction:column;gap:28px;min-width:0}
+.case .title h2{font-size:clamp(34px,4.6vw,56px);font-weight:800;line-height:1.05;margin-top:12px}
+.brand-line{font-size:17px;color:var(--muted);margin-top:14px;line-height:1.5}
+.brand-line b{color:var(--fg);font-weight:600}
+.band .brand-line b{color:var(--on-black)}
+.case .kpis{display:flex;gap:36px;flex-wrap:wrap}
+.case .kpis b{display:block;font-family:var(--display);font-size:46px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.case .kpis span{font-size:14px;color:var(--muted)}
+.blk h4{margin:0 0 6px;font-size:13px;letter-spacing:.18em;color:var(--muted);font-weight:700}
+.blk p{margin:0;font-size:18px;line-height:1.65}
+.blk p+p{margin-top:10px}
+.insight{background:var(--soft);padding:26px 28px;border-radius:6px;position:relative}
+.insight h4{color:var(--accent)}
+.insight p{font-family:var(--display);font-size:clamp(20px,2.2vw,26px);line-height:1.35;font-weight:500}
+.insight svg.corner{position:absolute;left:18px;top:18px}
+.band .insight{background:#1C1C1C}
+.band .insight h4{color:var(--rose)}
+.draft{font-size:13px;color:var(--accent);background:#FBEDEF;display:inline-block;padding:2px 10px;border-radius:999px}
+
+/* proof: the ads-manager row, and two zoomed-in tiles under it */
+.proof{margin:0;display:flex;flex-direction:column;gap:12px}
+.proof .strip{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}
+.proof .strip img{display:block;width:100%;max-width:100%}
+.proof figcaption{font-size:13px;color:var(--muted)}
+.zooms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:520px}
+.zoom{border:2px solid var(--fg);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.zoom img{display:block;width:100%;max-width:100%}
+.zoom small{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.band .zoom{border-color:var(--on-black)}
+.band .proof figcaption{color:#B9B2AA}
+
+/* grids */
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:40px}
+.grid4 .cell{aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--black);position:relative}
+.grid4 video,.grid4 img{width:100%;height:100%;object-fit:cover;display:block}
+.grid4 .cap{position:absolute;bottom:10px;right:10px;left:10px;color:#fff;font-size:13px;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.grid4 .ph{display:flex;align-items:center;justify-content:center;color:#B9B2AA;font-size:13px;padding:14px;text-align:center;background:#1C1C1C;height:100%}
+@media(max-width:720px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.series{margin-top:40px}
+.series h3{font-size:13px;letter-spacing:.18em;color:var(--muted);font-weight:700}
+.mini{display:flex;gap:10px;margin-top:12px;flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px;scrollbar-width:thin}
+.mini .cell{flex:0 0 112px;aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:var(--black);position:relative}
+.mini video{width:100%;height:100%;object-fit:cover;display:block}
+.mini .cap{position:absolute;bottom:6px;right:6px;left:6px;color:#fff;font-size:10px;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.7);line-height:1.2}
+.mini .ph{display:flex;align-items:center;justify-content:center;color:#B9B2AA;font-size:10px;padding:8px;text-align:center;background:#1C1C1C;height:100%}
+.mini.ads .cell{flex-basis:150px;aspect-ratio:4/5}
+.mini img{width:100%;height:100%;object-fit:cover;display:block}
+.mini .cap.win{background:var(--accent);color:#fff;left:auto;right:6px;bottom:auto;top:6px;padding:2px 8px;border-radius:999px;text-shadow:none;font-size:10px}
+
+/* two hooks */
+.hooks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:560px}
+@media(max-width:720px){.hooks{max-width:100%}}
+.hooks .player{box-shadow:none;border-radius:16px}
+.hooks small{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+
+/* band */
+.band{background:var(--black);color:var(--on-black)}
+.band .muted,.band .blk h4,.band .kpis span,.band .brand-line{color:#B9B2AA}
+
+/* analysis */
+.analysis .head{display:block}
+@media(max-width:820px){.analysis .head{grid-template-columns:1fr}}
+.analysis .head img{width:100%;max-width:360px;aspect-ratio:4/5;object-fit:cover;border-radius:6px;justify-self:start}
+.reels{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:44px}
+.story{display:flex;justify-content:center;margin-top:80px;padding-top:64px;border-top:1px solid #2A2A2A}
+.story-text{display:flex;flex-direction:column;gap:20px;font-size:19px;line-height:1.75;max-width:680px;text-align:center;align-items:center}
+.story-text p{margin:0}
+.story-text .big{font-family:var(--display);font-size:clamp(23px,2.6vw,30px);font-weight:500;line-height:1.35}
+.story-img{max-width:420px;width:100%;height:auto;justify-self:start;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.story-text em{font-style:normal;color:#fff;background:linear-gradient(transparent 55%,rgba(122,17,37,.9) 55%);padding:0 3px}
+.an-lead{margin:0;font-size:20px;line-height:1.6;color:#B9B2AA}
+.an-lead .hl{color:var(--rose);font-weight:700}
+.analysis h2 .wave{vertical-align:middle;margin-right:6px}
+@media(max-width:820px){.story{grid-template-columns:1fr;gap:28px}}
+.reels .player{box-shadow:none;border-radius:12px}
+.reels .player .stat{font-size:12px;padding:4px 9px;top:10px;right:10px}
+.reels small{display:block;margin-top:8px;font-size:13px;color:#B9B2AA;line-height:1.3}
+@media(max-width:1000px){.reels{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:560px){.reels{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* about */
+.about{display:block}
+.about img{width:100%;max-width:100%;aspect-ratio:4/5;object-fit:cover;filter:grayscale(1);border-radius:4px}
+.about h2{font-size:clamp(34px,4.4vw,54px);font-weight:800;line-height:1.08}
+.about p{font-size:19px;line-height:1.7;max-width:620px}
+.about .big{font-family:var(--display);font-size:clamp(22px,2.4vw,28px);font-weight:500;line-height:1.4}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:28px}.about img{max-width:300px}}
+
+/* contact */
+.cta h2{font-size:clamp(44px,7vw,92px);font-weight:900;line-height:1.02;letter-spacing:-.03em;max-width:900px}
+.cta-lead{font-size:20px;color:var(--muted);max-width:640px;margin:20px 0 0;line-height:1.6}
+.cta-box{margin-top:48px;padding:56px 32px;background:var(--accent);color:#fff;border-radius:14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.cta-role{font-family:var(--display);font-size:clamp(34px,4vw,48px);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.cta-skills{font-size:18px;color:#F2C9D1;letter-spacing:.06em}
+.cta-actions{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:22px}
+.cta-box .btn.big{background:#fff;color:var(--accent);border-color:#fff;font-size:19px;padding:18px 34px;gap:12px}
+.cta-box .cta-note{color:#F2C9D1}
+.cta-box .cta-phone{color:#fff}
+.cta-phone{font-weight:600;user-select:all;font-variant-numeric:tabular-nums;color:var(--fg)}
+.cta-list{margin:22px 0 0;padding:0 22px 0 0;font-size:18px;line-height:1.7;max-width:640px;display:flex;flex-direction:column;gap:6px}
+.cta-list li::marker{color:var(--accent)}
+.cta-x{font-family:var(--display);font-size:clamp(20px,2.3vw,26px);font-weight:500;line-height:1.4;max-width:760px;margin:28px 0 0}
+.cta-x .mult{color:var(--accent);white-space:nowrap}
+.cta-note{font-size:14px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:44px}
+.card{padding:34px;border-radius:8px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--line);background:#fff}
+.card.dark{background:var(--black);color:var(--on-black);border-color:var(--black)}
+.card h3{font-size:30px;font-weight:700;line-height:1.1}
+.card .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.card.dark .btn{border-color:#fff;color:#fff}
+.card.dark .btn.fill{background:#fff;color:var(--black)}
+.contact-line{display:flex;gap:24px;flex-wrap:wrap;font-size:16px;margin-top:12px;color:var(--muted)}
+.contact-line b{color:inherit;font-weight:600;user-select:all}
+@media(max-width:720px){.cards{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-block:28px;font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+</style>
+
+<div class="wrap">
+  <nav class="nav" aria-label="ניווט">
+    <div class="brand">קסם גלמידי</div>
+    <div class="links">
+      <a href="#tevel">תבל קמפרס <sup class="note">סטאדי קייס</sup></a><a href="#think">איך אני חושבת</a><a href="#analysis">מנתחת הכול</a><a href="#more">עוד סטאדיז</a><a href="#quotes">המלצות</a>
+    </div>
+    <a class="btn fill" href="#contact">בואו נדבר</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="eyebrow"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="currentColor"/></svg>תיק עבודות</div>
+      <h1 style="margin-top:18px">קסם<br>גלמידי</h1>
+      <div class="kicker">(אתם יכולים לקרוא לי Magic)</div>
+      <div class="role">אסטרטגית קריאייטיב · <span class="mark">מתמחה בפסיכולוגיה צרכנית<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 60 3, 120 12, 180 7 S 260 4, 298 8" fill="none" stroke="#7A1125" stroke-width="3" stroke-linecap="round"/></svg></span></div>
+      <p class="lead">אני לא מנחשת מה יעבוד על הקהל שלכם. אני נכנסת לו לראש. מבינה מה יגרום לו לעצור את הגלילה, לצפות עד הסוף, לזכור את המותג ולפעול. ומזה אני בונה תוכן שלא נעצר בפרזנטציה: תסריט, בריף, הפקה, עד שהוא חי ברשת ומביא תוצאות.</p>
+      <p class="promise">זאת ההבטחה שלי: לא עוד סרטון יפה. קריאייטיב שנבנה מהמחשבות של הקהל, ומזיז אותו לפעולה.</p>
+    </div>
+    <img class="photo" src="media/kesem-circle.jpg" alt="קסם גלמידי">
+  </header>
+
+  <div class="feed" aria-label="סרטונים נבחרים">
+    <div class="track" id="feed">
+      <a class="cell" href="#victory"><video src="media/victory-situations.mp4" poster="media/victory-situations.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">ויקטורי · טיקטוק</div></a>
+      <a class="cell" href="#tevel"><video src="media/tevel-europe.mp4" poster="media/tevel-europe.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">תבל קמפרס · ₪8.97 לליד</div></a>
+      <a class="cell" href="#victory"><video src="media/victory-which.mp4" poster="media/victory-which.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">ויקטורי · טיקטוק</div></a>
+      <a class="cell" href="#anabella"><video src="media/anabella-pain.mp4" poster="media/anabella-pain.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">אנבלה · קמפיין השקה</div></a>
+      <a class="cell" href="#pcm"><video src="media/pcm-hook1.mp4" poster="media/pcm-hook1.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">PCM · B2B</div></a>
+      <a class="cell" href="#victory"><video src="media/victory-krembo.mp4" poster="media/victory-krembo.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">ויקטורי · קרמבו</div></a>
+      <a class="cell" href="#tevel"><video src="media/victory-reserve.mp4" poster="media/victory-reserve.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">תבל קמפרס · מילואימניקים</div></a>
+      <a class="cell" href="#tevel"><video src="media/tv-first.mp4" poster="media/tv-first.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">תבל קמפרס · פעם ראשונה בקרוואן?</div></a>
+      <a class="cell" href="#pcm"><video src="media/pcm-hook2.mp4" poster="media/pcm-hook2.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="tag">PCM · הוק 2</div></a>
+    </div>
+    <div class="hint"><span>תגללו לסרטונים המלאים עם הסאונד ↓</span></div>
+  </div>
+</div>
+
+<div class="nums"><div class="wrap"><div class="grid">
+  <div><b>8</b><span>שנות ניסיון</span></div>
+  <div><b>100+</b><span>מותגים ובעלי עסקים</span></div>
+  <div><b>10,000+</b><span>תסריטים שכתבתי</span></div>
+  <div><b>מאות</b><span>בריפים ליוצרים ולצוותים</span></div>
+</div></div></div>
+
+<!-- TEVEL -->
+<section id="tevel" style="background:var(--soft)"><div class="wrap">
+  <div class="case">
+    <div class="player" data-player><video src="media/tevel-europe.mp4" poster="media/tevel-europe.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה עם סאונד"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button><div class="stat">₪8.97 לליד</div></div>
+    <div class="text">
+      <div class="title">
+        <img class="case-logo big" src="media/logo-tevel.png" alt="Tevel Campers"><div class="eyebrow">תבל קמפרס · ממומן · <span class="goal">המטרה: לידים</span></div>
+        <h2>״דרך חדשה לטייל באירופה״</h2>
+        <p class="brand-line"><b>תבל קמפרס</b> - מציעים חבילות של השכרת קרוואן + טיסות לאירופה.</p>
+      </div>
+      <div class="kpis"><div><b>184</b><span>לידים מסרטון אחד</span></div><div><b>₪8.97</b><span>עלות לליד</span></div><div><b>85%</b><span>מהלידים רלוונטיים</span></div></div>
+      <figure class="proof">
+        <div class="strip"><img src="media/tevel-data.png" alt="שורת הקמפיין במנהל המודעות: 184 לידים, 8.97 ₪ לליד"></div>
+        <div class="zooms"><div class="zoom"><img src="media/tevel-z-leads.png" alt=""><small>לידים</small></div><div class="zoom"><img src="media/tevel-z-cost.png" alt=""><small>עלות לליד</small></div></div>
+        <figcaption>מתוך מנהל המודעות</figcaption>
+      </figure>
+      <div class="insight blk"><svg class="corner" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="#7A1125"/></svg><h4>התובנה</h4><p>״חשבתם על טיול באירופה, אבל לא חשבתם על קרוואן.״</p></div>
+      <div class="blk"><h4>מה עומד מאחורי הקריאייטיב</h4>
+        <p>הקריאייטיב הזה פונה לקהל קר, שלא פגש את תבל קמפרס לפני. קודם כל יש כותרת גדולה ומסננת לאורך כל הסרטון - ״טיולי קרוואנים באירופה״. ושמתי דגש על ההוק, שהוא הלב של הקריאייטיב: ״יש דרך נוספת לטייל באירופה״. היא שוברת את המיתוס של חופשה בנאלית באירופה, שזה בית מלון וטיול בעיר, ומגלה להם עולם חדש.</p>
+        <p>לאורך כל הסרטון השארתי את היעדים שתבל מציעים, כדי לסנן את מי שמחפש יעדים אחרים ולא רלוונטי למותג. במהלך הסרטון אני מרחיבה על החוויה ועל פירוט החבילה, ושמה דגש על הבידול שלהם לעומת המתחרים.</p>
+        <p>הוויז׳ואל של הסרטון נועד ללוות את המלל ולתת תחושות לחוויה: איך קמים בבוקר, איך נוהגים, איך מכינים אוכל, איך נחים, איך זה נראה בעיניים. והכול מסרטונים אמיתיים, כדי לחבר לחוויה האותנטית.</p>
+        <p>המטרה שלי הייתה שכל מי שרואה את הסרטון יגיד לעצמו בלב: ״אני חייב לברר על זה״.</p>
+        <p>הסרטון מאוד פשוט, אבל יש בו המון המון מחשבה.</p>
+      </div>
+      <div class="blk"><h4>ואחר כך</h4><p>הסרטון הפך לוינר, וסביבו יצרתי בהמשך וריאציות שונות.</p></div>
+      <div class="series">
+        <h3>עוד סרטונים שיצרתי לתבל קמפרס</h3>
+        <div class="mini">
+          <div class="cell"><video src="media/tv-first.mp4" poster="media/tv-first.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">פעם ראשונה בקרוואן?</div></div>
+          <div class="cell"><video src="media/tv-early.mp4" poster="media/tv-early.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">הזמנה מוקדמת</div></div>
+          <div class="cell"><video src="media/tv-cheap.mp4" poster="media/tv-cheap.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">אנחנו לא הכי זולים</div></div>
+          <div class="cell"><video src="media/tv-different.mp4" poster="media/tv-different.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">חשבתי על משהו שונה</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="think"><div class="wrap think">
+  <div class="sec-head">
+    <div class="eyebrow">וככה אני עובדת:</div>
+    <h2>לפני שאני כותבת מילה אחת, אני כבר יודעת בדיוק מה הקהל חושב ומרגיש.</h2>
+    <p>אני לא מנחשת מה יעבוד.<br>אני נכנסת לראש של הקהל, למחשבות שהוא לא אומר בקול, ובונה משם את המשפך הפסיכולוגי.</p>
+    <p class="steps-intro">והנה שלבי העבודה שלי,<br>לכל סרטון, לכל מודעה ולכל בריף:</p>
+  </div>
+  <ol class="flow">
+    <li><span class="n">1</span><div><h3>מנתחת את הקהל. באמת.</h3><p>מה הוא רוצה, מה המחשבות הנסתרות שלו, מה יגרום לו לחשוב, מה יגרום לתת-המודע שלו לעצור - ואיך הוא יגיב.</p></div></li>
+    <li><span class="n">2</span><div><h3>כותבת לו את מה שהוא רוצה לשמוע. וגם את מה שהוא לא.</h3><p>משלבת את זה עם הוויז׳ואל ועם המסר, ובונה את המשפך בראש שלו, עוד לפני שהוא יודע שהוא בתוך משפך.</p></div></li>
+    <li><span class="n">3</span><div><h3>מייצאת הכול לבריף, או כותבת את התסריט.</h3><p>ולא מוותרת על שלושה הוקים. אף פעם.</p></div></li>
+    <li><span class="n">4</span><div><h3>מייצרת בעצמי, או מלווה את הצוות שמפיק.</h3><p>צילום, עריכה, עבודה עם יוצרי תוכן. אני שם עד שהתוצר נראה כמו שדמיינתי.</p></div></li>
+    <li><span class="n">5</span><div><h3>עולה לאוויר. אורגני או ממומן.</h3><p>ואז מנתחת את הדאטה.</p></div></li>
+    <li><span class="n">6</span><div><h3>וינר הופך לעוד וינר.</h3><p>לא וינר? אני עושה עוד ניסויים, עוד טסטים, עד שאני מפצחת.</p></div></li>
+  </ol>
+</div></section>
+
+<!-- ANALYSIS + ABOUT -->
+<section id="analysis" class="band analysis"><div class="wrap">
+  <div class="sec-head" style="max-width:820px">
+    <div class="eyebrow">הצד השני שלי · @kesemgalmidi</div>
+    <h2>מכירים את זאת שצריכה לנתח את הכול? אז זאת אני.</h2>
+    <p class="an-lead"><span class="hl">זה מה שאני עושה בעמודים שלי ברשתות:</span><br>למה השיווק של השיר החדש של נועה קירל הוא לא פחות מגאוני. למה ג׳ורג׳ קוסטנזה מצחיק. למה הארווי ספקטר משכנע.</p>
+  </div>
+  <div class="reels">
+    <div><div class="player" data-player><video src="media/an-lovesong.mp4" poster="media/an-lovesong.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>לאב סונג · נועה קירל</small></div>
+    <div><div class="player" data-player><video src="media/an-george.mp4" poster="media/an-george.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>ג׳ורג׳ קוסטנזה</small></div>
+    <div><div class="player" data-player><video src="media/an-harvey.mp4" poster="media/an-harvey.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>המיינדסט של הארווי ספקטר</small></div>
+    <div><div class="player" data-player><video src="media/an-disney.mp4" poster="media/an-disney.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>דיסני - זה באמת לילדים?</small></div>
+    <div><div class="player" data-player><video src="media/an-taylor.mp4" poster="media/an-taylor.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>טיילור סוויפט והסופרבול</small></div>
+    <div><div class="player" data-player><video src="media/an-frank.mp4" poster="media/an-frank.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה"><span><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>המיינדסט של פרנק</small></div>
+  </div>
+
+  <div class="story">
+    <div class="story-text">
+      <p class="big">אני <em>אובססיבית לדמויות</em>. ולהבנה של למה אנחנו אוהבים דמות, למה אנחנו שונאים אותה, ולמה אנחנו אדישים אליה.</p>
+      <p>ודמויות הן בדיוק אנחנו. השפה המקצועית תקרא לזה ״אווטאר״, אני אמשיך לקרוא לזה דמות. השריטות שלה, המחשבות הסודיות שלה, המניעים שלה, הם שיכתיבו מה היא תעשה.</p>
+      <p>בשביל זה למדתי עריכה ספרותית, איך כותבים דמויות, והפכתי למאמנת מנטלית, כדי להבין מה חוסם אנשים מביצוע ואיך אנחנו חושבים.</p>
+      <p>וככה בדיוק אני חושבת על קריאייטיב: מפצחת את הקהל: מה הוא רוצה, מה מניע אותו, מה המחשבות הנסתרות שלו. משם <em>הוק, תסריט, בריף</em>, ומשם אני מוכרת.</p>
+      <p class="big">ובסוף? <span class="mark">זה עובד<svg viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 60 3, 120 12, 180 7 S 260 4, 298 8" fill="none" stroke="#F2A7B5" stroke-width="3" stroke-linecap="round"/></svg></span>.</p>
+    </div>
+    
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact" class="cta" style="background:var(--soft);border-top:1px solid var(--line)"><div class="wrap">
+  <div class="eyebrow">דברו איתי</div>
+  <h2 style="margin-top:14px">רוצים שאכנס לראש של הקהל שלכם?</h2>
+  <p class="cta-lead">אני אעשה את המחקר, של קהל היעד ושל המתחרים, אלמד את הדאטה ואייצר את האסטרטגיה:</p>
+  <ul class="cta-list">
+    <li>למה הוינרים הם הוינרים, ואיך נייצר מהם עוד וינרים.</li>
+    <li>מה הטסטים הבאים.</li>
+    <li>על אילו תכנים נשים את התקציב.</li>
+    <li>ואבדוק: קונספטים, זוויות, מסרים וקהלים שונים.</li>
+    <li>אפיק לכם את התכנים בעצמי, או אוריד בריפים לצוות שלכם ואלווה אותו.</li>
+  </ul>
+  <p class="cta-x">הכול כדי שהתקציב שלכם יעבוד <span class="mult">פי כמה</span>, בהתאם לאיפה שהמותג שלכם נמצא, ולמה שהוא צריך.</p>
+  <div class="cta-box">
+    <div class="cta-role">קסם גלמידי</div>
+    <div class="cta-skills">אסטרטגית קריאייטיב</div>
+    <div class="cta-actions">
+      <a class="btn big" href="https://wa.me/972549202100" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c1.6.7 1.9.5 2.3.5a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1z" fill="currentColor"/></svg>אנחנו רוצים לעבוד איתך</a>
+      <span class="cta-note">הכפתור פותח הודעת וואטסאפ אליי · <span class="cta-phone">054-9202100</span></span>
+    </div>
+  </div>
+</div></section>
+
+<!-- CASE INDEX -->
+<section id="more" class="band more"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">לעוד סטאדי קייסים - תגללו ↓</div>
+    <h2>הנה עוד ארבעה.<br>שוק אחר, קהל אחר, זווית אחרת.</h2>
+  </div>
+  <div class="case-index">
+    <a href="#course"><img src="media/tal-ad.jpg" alt=""><span><b>מכירת קורס לנשירת שיער</b><small>59 מכירות ממודעת רימרקטינג אחת</small></span></a>
+    <a href="#victory"><img src="media/victory-which.jpg" alt=""><span><b>ויקטורי</b><small>טיקטוק · הומור במקום מכירה ישירה</small></span></a>
+    <a href="#anabella"><img src="media/anabella-pain.jpg" alt=""><span><b>אנבלה</b><small>קמפיין השקה · ואז רימרקטינג שהביא מאות רכישות</small></span></a>
+    <a href="#pcm"><img src="media/pcm-hook1.jpg" alt=""><span><b>PCM</b><small>B2B · לידים זולים ואיכותיים</small></span></a>
+  </div>
+</div></section>
+
+<!-- TAL -->
+<section id="course"><div class="wrap">
+  <div class="case">
+    <div class="player r45" style="box-shadow:none"><img src="media/tal-ad.jpg" alt="המודעה: לעצור את הנשירה ב-7 ימים, למלא את השיער ב-90 יום. לפני ואחרי, קוד קופון grow"></div>
+    <div class="text">
+      <div class="title">
+        <div class="eyebrow">טל · קורס דיגיטלי · ממומן · <span class="goal">המטרה: רכישות</span></div>
+        <h2>לא הסתפקתי ב״שיער דליל״.</h2>
+        <p class="brand-line"><b>טל</b> - מוכרת קורס דיגיטלי לנשים עם נשירת שיער: לעצור את הנשירה ולמלא את השיער בחזרה, באופן טבעי.</p>
+      </div>
+      <div class="kpis"><div><b>59</b><span>רכישות ב-40 יום ממודעה אחת</span></div><div><b>₪68.94</b><span>עלות לרכישה</span></div></div>
+      <figure class="proof">
+        <div class="strip"><img src="media/tal-data.png" alt="שורת הקמפיין במנהל המודעות: 59 רכישות באתר, 68.94 ₪ לרכישה"></div>
+        <div class="zooms"><div class="zoom"><img src="media/tal-z-buys.png" alt=""><small>רכישות</small></div><div class="zoom"><img src="media/tal-z-cost.png" alt=""><small>עלות לרכישה</small></div></div>
+        <figcaption>מתוך מנהל המודעות</figcaption>
+      </figure>
+      <div class="blk"><h4>מה עומד מאחורי הקריאייטיב</h4>
+        <p>בשוק מאוד תחרותי של פתרונות לנשירת שיער, האישה צריכה לזהות את עצמה. לא הסתפקתי רק בלכתוב ״שיער דליל״, אלא תיארתי את כל הבעיות שיכול להיות שיש לאותה אישה - כל אישה יכולה למצוא את הבעיה שיש לה ולהזדהות. שילבתי תמונת לפני/אחרי עם הסבר מפורט. ובכותרת צעקתי את הפתרון, על ידי הבטחה קונקרטית שמציע הקורס הדיגיטלי.</p>
+        <p>המודעה פורסמה לקהל רימרקטינג רותח, קהל שכבר דרך כמה וכמה פעמים בדף הנחיתה. המטרה הייתה לתת להן דחיפה לרכישה, ולכן השתמשתי בקוד קופון. דחפתי באמצעות המשפט ״ועכשיו ב-20% הנחה שאסור לך לפספס!״, ובמקום כפתור סטנדרטי של הנעה לפעולה כתבתי ״קוד קופון: grow״, כדי לנעול את ההטבה בראש של האישה.</p>
+        <p>בטווח של 40 ימים היו 59 רכישות לקורס דרך המודעה הזאת. היא הפכה לוינר, הרצתי עליה עוד ים של וריאציות, ואז הכנסתי אותה גם לקהל קר, והיא הביאה רכישות נוספות.</p>
+      </div>
+      <div class="series">
+        <h3>עוד מודעות סטטיות שהכנתי לטל · כל אחת מהן הפכה לוינר</h3>
+        <div class="mini ads">
+          <div class="cell"><img src="media/tal-ad2.jpg" alt="מודעה: פחות שיער יורד במברשת"><div class="cap win">וינר</div></div>
+          <div class="cell"><img src="media/tal-ad3.jpg" alt="מודעה: הטקס המתיש הזה חייב להיפסק"><div class="cap win">וינר</div></div>
+          <div class="cell"><img src="media/tal-ad4.jpg" alt="מודעה: איך לעצור את הנשירה תוך 7 ימים, לפני ואחרי"><div class="cap win">וינר</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- VICTORY -->
+<section id="victory" style="background:var(--soft)"><div class="wrap">
+  <div class="case flip">
+    <div class="player" data-player><video src="media/victory-which.mp4" poster="media/victory-which.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה עם סאונד"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div>
+    <div class="text">
+      <div class="title">
+        <img class="case-logo big" src="media/logo-victory.png" alt="ויקטורי"><div class="eyebrow">ויקטורי · טיקטוק · אורגני · <span class="goal">המטרה: טראפיק</span></div>
+        <h2>כל סופר מנסה למכור. בטיקטוק של ויקטורי - הפוך.</h2>
+        <p class="brand-line"><b>ויקטורי</b> - רשת סופרמרקטים ארצית. הביאו אותי כדי לייצר טראפיק לויקטורי בטיקטוק.</p>
+      </div>
+      <div class="insight blk"><svg class="corner" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="#7A1125"/></svg><h4>האסטרטגיה</h4><p>לא מדברים על הסופר. בכלל.<br>המטרה היא לייצר סרטונים קומיים שמתאימים לטיקטוק. כאלו שקל לקהל להזדהות איתם, לצחוק מהם ולזכור אותם.</p></div>
+      <div class="blk"><h4>מה עומד מאחורי הקריאייטיב</h4><p>כל סופר מנסה למכור. הוא דוחף באופן ישיר את המבצעים, ועד כמה הוא יותר טוב מאחרים. האסטרטגיה שיצרתי לטיקטוק של ויקטורי היא הפוכה: אני לא הולכת לומר מילה על הסופר, לא על המבצעים ולא על המוצרים. אלא אייצר סרטונים קומיים, זכירים, מותאמים לטיקטוק, מסיטואציות שכולנו מכירים. הסופר, במקרה הזה, הוא רק הלוקיישן.</p><p>ייצרתי מאות סרטונים שמביאים טראפיק, תגובות ותיוגים של חברים, ושומרים על קול הומוריסטי של המותג, שמזוהה איתו.</p></div>
+    </div>
+  </div>
+  <div class="series">
+    <h3>עוד סרטונים שיצרתי לויקטורי</h3>
+    <div class="mini">
+      <div class="cell"><video src="media/victory-situations.mp4" poster="media/victory-situations.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">סיטואציות</div></div>
+      <div class="cell"><video src="media/v-pasta.mp4" poster="media/v-pasta.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">עוד פסטה</div></div>
+      <div class="cell"><video src="media/victory-krembo.mp4" poster="media/victory-krembo.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">קרמבו</div></div>
+      <div class="cell"><video src="media/v-kippur.mp4" poster="media/v-kippur.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">כיפור</div></div>
+      <div class="cell"><video src="media/victory-snacks.mp4" poster="media/victory-snacks.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">חטיפים</div></div>
+      <div class="cell"><video src="media/v-alone.mp4" poster="media/v-alone.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">לגור לבד</div></div>
+      <div class="cell"><video src="media/victory-hanukkah.mp4" poster="media/victory-hanukkah.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">חנוכה</div></div>
+      <div class="cell"><video src="media/v-rosh.mp4" poster="media/v-rosh.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">ראש השנה</div></div>
+      <div class="cell"><video src="media/v-bbq.mp4" poster="media/v-bbq.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">על האש בסוכות</div></div>
+      <div class="cell"><video src="media/v-fall.mp4" poster="media/v-fall.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">הגיע הסתיו</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ANABELLA -->
+<section id="anabella"><div class="wrap">
+  <div class="case">
+    <div class="player" data-player><video src="media/anabella-pain.mp4" poster="media/anabella-pain.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה עם סאונד"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div>
+    <div class="text">
+      <div class="title">
+        <img class="case-logo" src="media/logo-anabella.svg" alt="Anabella"><div class="eyebrow">אנבלה · קמפיין השקה · ממומן · <span class="goal">המטרה: מכירות</span></div>
+        <h2>נשים סובלות מספיק. לא צריך לסבול גם בשאיבה.</h2>
+        <p class="brand-line"><b>אנבלה</b> - משאבת הנקה לבישה עם פטנט של מנגנון שמדמה את תנועת הלשון של התינוק. מטרת הקמפיין: להשיק ולמכור משאבה חדשה בשוק.</p>
+      </div>
+      <div class="insight blk"><svg class="corner" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="#7A1125"/></svg><h4>התובנה</h4><p>נשים סובלות גם ככה מהיותן נשים. אישה לא צריכה לסבול גם בשאיבה.</p></div>
+      <div class="blk"><h4>מה עומד מאחורי הקריאייטיב</h4>
+        <p>המנגנון הייחודי של אנבלה מאפשר חוויית שאיבה ללא כאב בכלל. ובשוק המשאבות, שהוא רווי והקהל עושה בו את המחקר שלו, היה חשוב לי לשחק על הרגש.</p>
+        <p>אישה יודעת שהיא סובלת לא מעט כדי להיות אישה: גבות, שפם, טיפולי פנים, לייזר. אז השאלה מגיעה כדי לערער אותה: ״האם גם בשאיבה את צריכה לסבול?״</p>
+        <p>כי המנגנון של משאבת אנבלה הוא פטנט, והוא הבידול המרכזי בינה לבין שאר המשאבות. הוא מבטיח חוויית שאיבה ללא כאב.</p>
+      </div>
+      <div class="series">
+        <h3>עוד קריאייטיבים שהכנתי לאנבלה</h3>
+        <div class="mini">
+          <div class="cell"><video src="media/x-unboxing.mp4" poster="media/x-unboxing.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">אנבוקסינג</div></div>
+          <div class="cell"><video src="media/x-2.mp4" poster="media/x-2.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">הידעת?</div></div>
+          <div class="cell"><img src="media/ana-static.jpg" alt="איזו אמא את בוחרת להיות"><div class="cap">סטטי</div></div>
+        </div>
+      </div>
+      <div class="blk"><h4>ואחר כך - הרימרקטינג</h4>
+        <p>דווקא הקהל הכי רותח, זה שכבר ראה וצפה, פשוט היה צריך להרגיש ביטחון. אז צילמנו שאלות ותשובות מקצועיות: בדיוק השאלות ששירות הלקוחות מקבל, עשרות כל יום. וזה עשה את העבודה. הרימרקטינג הביא מאות רכישות.</p>
+        <div class="mini">
+          <div class="cell"><video src="media/ana-q1.mp4" poster="media/ana-q1.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+          <div class="cell"><video src="media/ana-q4.mp4" poster="media/ana-q4.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+          <div class="cell"><video src="media/ana-q5.mp4" poster="media/ana-q5.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+          <div class="cell"><video src="media/ana-q13.mp4" poster="media/ana-q13.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- PCM -->
+<section id="pcm" style="background:var(--soft)"><div class="wrap case flip">
+  <div class="hooks">
+    <div><div class="player" data-player><video src="media/pcm-hook1.mp4" poster="media/pcm-hook1.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה - סרטון 1"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>הוק 1</small></div>
+    <div><div class="player" data-player><video src="media/pcm-hook2.mp4" poster="media/pcm-hook2.jpg" playsinline preload="metadata"></video><button aria-label="הפעלה - סרטון 2"><span><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="#fff"/></svg></span></button></div><small>הוק 2</small></div>
+  </div>
+  <div class="text">
+    <div class="title">
+      <img class="case-logo pcm" src="media/logo-pcm.png" alt="PCM"><div class="eyebrow">PCM · סיליקונים לאנשי מקצוע · ממומן · <span class="goal">המטרה: לידים</span></div>
+      <h2>במכירת סיליקונים לקבלנים, אני לא רוצה לדבר על המוצר - אלא על הכבוד המקצועי שלהם.</h2>
+      <p class="brand-line"><b>PCM</b> - חברה ותיקה ומוכרת לחומרי בנייה וגמר לאנשי מקצוע. מוצר הדגל: סיליקונים.</p>
+    </div>
+    <div class="blk"><h4>מה עומד מאחורי הקריאייטיב</h4>
+      <p><b>הקהל:</b> קבלנים ואנשי מקצוע.<br><b>המטרה:</b> לידים רלוונטיים ומכירה של סיליקונים ומוצרי עבודה שוטפת.<br><b>הבעיה העיקרית:</b> קריאייטיבים שנשחקים מהר מאוד, דווקא סביב הסיליקונים, מוצר הדגל של החברה.</p>
+      <p>יצרתי סרטון ובחרתי לפנות לכבוד ולאגו של אנשי המקצוע, ולקרוא להם ״אתם לא מספיק מקצועיים״ אם אתם בוחרים בסיליקון זול ולא איכותי. בעצם הפניתי את האשמה על עבודה לא טובה אליהם. כי הם אוהבים להאשים את הלקוח.</p>
+      <p>הדגשתי, בלי לומר במפורש, שהסיליקונים של PCM הם הכי טובים בשוק, ודווקא בחירה בסיליקונים האלו תהפוך אותם לבעלי מקצוע הרבה יותר טובים.</p>
+      <p>חשוב לי להדגיש: מדובר בקמפיין רץ שמכיל עשרות מודעות, וזו מודעה שמעבירה את המסר הפוך על הפוך.</p>
+    </div>
+    <div class="blk"><h4>התגובה של הלקוח</h4><div class="pcm-quote"><img src="media/t-pcm.jpg" alt="הודעת וואטסאפ מהלקוח: הקמפיינים עם המודעות החדשות טיל. נכנסו לו ים לידים גם בזול וגם איכותיים ממש"></div></div>
+    <div class="series">
+      <h3>עוד סרטונים ל-PCM · פורמטים ומסרים שונים · כולם וינרים</h3>
+      <div class="mini">
+        <div class="cell"><video src="media/x-450.mp4" poster="media/x-450.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">450 חנויות · מוכר</div></div>
+        <div class="cell"><video src="media/x-vo-sales.mp4" poster="media/x-vo-sales.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">וויס אובר מכירתי</div></div>
+        <div class="cell"><video src="media/x-mamuman2.mp4" poster="media/x-mamuman2.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">Big Wipes · הדגמה</div></div>
+        <div class="cell"><video src="media/x-vo.mp4" poster="media/x-vo.jpg" muted loop playsinline autoplay preload="metadata"></video><div class="cap">Rhino Guard · וויס אובר</div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- TESTIMONIALS -->
+<section id="quotes" style="border-top:1px solid var(--line)"><div class="wrap">
+  <div class="sec-head">
+    <div class="eyebrow">מה אומרים אחרי שעובדים איתי</div>
+    <h2>על התהליך, על הדיוק, ועל התוצאות.</h2>
+  </div>
+  <div class="quotes">
+    <div class="col"><img src="media/t-yehudit.jpg" alt="המלצה: קסם נמצאת ברמה אחרת מעבר למצוינות. משקיעה בכל פרט, מדייקת ומדקדקת, ממקדת את האדם שמולה ומצליחה לזקק את המסר"><img src="media/t-savlanut.png" alt="תודה קסם, שמחה על הזכות לעבוד איתך, על הסבלנות והאמפתיה"></div>
+    <div class="col"><img src="media/t-kosemet.png" alt="קוסמת שלי - תודה על הדחיפה, על הקידום והמאמץ. איך את תמיד חושבת על הפרטים הקטנים"><img src="media/t-alufa.jpg" alt="אופן הצילום שלך, ההדרכה שלך, ההכוונה מה לומר - באמת שאת אלופה"></div>
+    <div class="col"><img src="media/t-geona.png" alt="זכיתי בך לגמרי, את גאונה. מהפרויקט הספציפי, מהעבודה השותפת, מהמענה המהיר, מהלמידה"></div>
+  </div>
+</div></section>
+
+<!-- FINAL CTA -->
+<section class="final band"><div class="wrap final-in">
+  <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M12 2l1.8 7.2L21 12l-7.2 2.8L12 22l-1.8-7.2L3 12l7.2-2.8z" fill="#F2A7B5"/></svg>
+  <h2>רוצים שאכנס לראש<br>של הקהל שלכם?</h2>
+  <p>קסם גלמידי · אסטרטגית קריאייטיב</p>
+  <a class="btn big" href="https://wa.me/972549202100" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.7-1.2.1-.2 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11 11 0 0 0 4.3 3.8c1.6.7 1.9.5 2.3.5a2 2 0 0 0 1.4-1c.2-.5.2-.9.1-1z" fill="currentColor"/></svg>אנחנו רוצים לעבוד איתך</a>
+  <small>הכפתור פותח הודעת וואטסאפ אליי · <b>054-9202100</b></small>
+  <footer><span>© קסם גלמידי</span><span>Magic</span></footer>
+</div></section>
+
+<script>
+(function(){
+  var players=[].slice.call(document.querySelectorAll('[data-player]'));
+  players.forEach(function(p){
+    var v=p.querySelector('video'),b=p.querySelector('button');
+    if(!v||!b)return;
+    b.addEventListener('click',function(){
+      if(v.paused){players.forEach(function(o){var ov=o.querySelector('video');if(ov&&ov!==v){ov.pause();o.classList.remove('playing');}});
+        v.muted=false;v.play().then(function(){p.classList.add('playing');}).catch(function(){});
+      }else{v.pause();p.classList.remove('playing');}
+    });
+    v.addEventListener('ended',function(){p.classList.remove('playing');v.currentTime=0;});
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){v.play().catch(function(){});}else{v.pause();}});},{threshold:.2});
+    document.querySelectorAll('.feed video,.grid4 video,.mini video').forEach(function(v){io.observe(v);});
+  }
+})();
+</script>
+</body>
+</html>
